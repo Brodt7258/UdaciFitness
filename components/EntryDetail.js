@@ -69,7 +69,7 @@ const mapDispatchToProps = (dispatch, { navigation }) => {
 
   return {
     remove: () => dispatch(addEntry({
-      [entryId]: timeToString === entryId
+      [entryId]: timeToString() === entryId
         ? getDailyReminder()
         : null
     })),
